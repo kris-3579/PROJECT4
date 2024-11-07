@@ -1,0 +1,8 @@
+package com.example.project4;
+
+import java.util.ArrayList;
+
+public class Order {
+    private int number; //order number
+    private ArrayList<Pizza> pizzas; //can use List<E> instead of ArrayList<E>
+}
