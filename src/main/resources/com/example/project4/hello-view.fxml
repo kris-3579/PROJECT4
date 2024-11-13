@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.project4.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.HelloController">
+   <center>
+      <BorderPane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="chicagoStyleButton" layoutX="112.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#switchToChicagoStyle" text="Chicago Style " />
+                  <Button fx:id="nyStyleButton" layoutX="424.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#switchToNyStyle" text="NY Style" />
+                  <Button fx:id="ordersPlacedButton" layoutX="120.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#switchToOrdersPlaced" text="Orders Placed" />
+                  <Button fx:id="currentOrder" layoutX="395.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#switchToCurrentOrder" text="Current Order" />
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>

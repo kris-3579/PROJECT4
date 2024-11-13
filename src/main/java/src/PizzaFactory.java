@@ -1,4 +1,4 @@
-package com.example.project4;
+package src;
 
 public interface PizzaFactory {
     Pizza createDeluxe();
