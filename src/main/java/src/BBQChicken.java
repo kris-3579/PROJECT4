@@ -4,15 +4,13 @@ import java.util.ArrayList;
 
 public class BBQChicken extends Pizza {
 
-    private static ArrayList<Topping> toppings = new ArrayList<>();
-    Crust crust;
 
     BBQChicken(Crust crust) {
-        super(toppings, crust);
-        toppings.add(Topping.BBQCHICKEN);
-        toppings.add(Topping.GREENPEPPER);
-        toppings.add(Topping.PROVOLONE);
-        toppings.add(Topping.CHEDDAR);
+        super(new ArrayList<Topping>(), crust);
+        this.addToppings(Topping.BBQCHICKEN);
+        this.addToppings(Topping.GREENPEPPER);
+        this.addToppings(Topping.PROVOLONE);
+        this.addToppings(Topping.CHEDDAR);
     }
 
     @Override
@@ -34,12 +32,7 @@ public class BBQChicken extends Pizza {
 
     @Override
     public String toString() {
-        return "BBQ Chicken" + this.toppings.toString() + super.getCrust().toString() + this.price();
-    }
-
-    @Override
-    public void addToppings(Topping topping) {
-
+        return "BBQ Chicken " + super.getType() + " " + super.getToppings().toString() + " " + super.getCrust().toString() + " " + this.price();
     }
 
 

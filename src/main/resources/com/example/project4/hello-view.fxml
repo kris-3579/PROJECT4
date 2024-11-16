@@ -13,7 +13,7 @@
                   <Button fx:id="chicagoStyleButton" layoutX="112.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#switchToChicagoStyle" text="Chicago Style " />
                   <Button fx:id="nyStyleButton" layoutX="424.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#switchToNyStyle" text="NY Style" />
                   <Button fx:id="ordersPlacedButton" layoutX="120.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#switchToOrdersPlaced" text="Orders Placed" />
-                  <Button fx:id="currentOrder" layoutX="395.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#switchToCurrentOrder" text="Current Order" />
+                  <Button fx:id="currentOrderButton" layoutX="395.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#switchToCurrentOrder" text="Current Order" />
                </children>
             </AnchorPane>
          </top>

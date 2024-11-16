@@ -4,17 +4,16 @@ import java.util.ArrayList;
 
 public class Deluxe extends Pizza {
 
-    private static ArrayList<Topping> toppings = new ArrayList<>();
 
     Crust crust;
 
     Deluxe(Crust crust){
-        super(toppings, crust);
-        toppings.add(Topping.SAUSAGE);
-        toppings.add(Topping.PEPPERONI);
-        toppings.add(Topping.GREENPEPPER);
-        toppings.add(Topping.ONION);
-        toppings.add(Topping.MUSHROOM);
+        super(new ArrayList<Topping>(), crust);
+        this.addToppings(Topping.SAUSAGE);
+        this.addToppings(Topping.PEPPERONI);
+        this.addToppings(Topping.GREENPEPPER);
+        this.addToppings(Topping.ONION);
+        this.addToppings(Topping.MUSHROOM);
     }
 
 
@@ -36,11 +35,7 @@ public class Deluxe extends Pizza {
 
     @Override
     public String toString() {
-        return "Delux Chicken" + this.toppings.toString() + super.getCrust().toString() + this.price();
+        return "Deluxe Chicken " + super.getType() + " " + super.getToppings().toString() + " " + super.getCrust().toString() + " " + this.price();
     }
 
-    @Override
-    public void addToppings(Topping topping) {
-
-    }
 }

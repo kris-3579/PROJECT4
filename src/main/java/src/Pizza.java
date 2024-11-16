@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public abstract class Pizza {
     private ArrayList<Topping> toppings; //Topping is a Enum class
     private Crust crust; //Crust is a Enum class
-    private Size size; //Size is a Enum class
+    private Size size;
+    private String type;//Size is a Enum class
 
 
 
@@ -19,6 +20,15 @@ public abstract class Pizza {
         this.size = s;
     }
 
+    public void setType(String type){
+        this.type = type;
+    }
+
+
+    public String getType(){
+        return this.type;
+    }
+
     public Size getSize(){
         return this.size;
     }
@@ -30,7 +40,13 @@ public abstract class Pizza {
     }
     public abstract String toString();
 
-    public abstract void addToppings(Topping topping);
+    public void addToppings(Topping topping) {
+        this.toppings.add(topping);
+    }
+
+    public ArrayList<Topping> getToppings(){
+        return this.toppings;
+    }
 
 
 }

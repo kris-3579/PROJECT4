@@ -4,21 +4,30 @@ public class ChicagoPizza implements PizzaFactory {
 
     @Override
     public Pizza createDeluxe() {
-        return new Deluxe(Crust.DEEPDISH);
+        Pizza pizza =  new Deluxe(Crust.DEEPDISH);
+        pizza.setType("Chicago");
+        return pizza;
     }
 
     @Override
     public Pizza createMeatzza() {
-        return new Meatzza(Crust.STUFFED);
+        Pizza pizza = new Meatzza(Crust.STUFFED);
+        pizza.setType("Chicago");
+        return pizza;
     }
 
     @Override
     public Pizza createBBQChicken() {
-        return new BBQChicken(Crust.PAN);
+        Pizza pizza = new BBQChicken(Crust.PAN);
+        pizza.setType("Chicago");
+        return pizza;
+
     }
 
     @Override
     public Pizza createBuildYourOwn() {
-        return new BuildYourOwn(Crust.PAN);
+        Pizza pizza = new BuildYourOwn(Crust.PAN);
+        pizza.setType("Chicago");
+        return pizza;
     }
 }

@@ -3,17 +3,16 @@ package src;
 import java.util.ArrayList;
 
 public class Meatzza extends Pizza {
-    private static ArrayList<Topping> toppings = new ArrayList<Topping>();
 
-    Crust crust;
 
 
     Meatzza(Crust crust){
-        super(toppings, crust);
-        toppings.add(Topping.SAUSAGE);
-        toppings.add(Topping.PEPPERONI);
-        toppings.add(Topping.BEEF);
-        toppings.add(Topping.HAM);
+        super(new ArrayList<>(), crust);
+        this.addToppings(Topping.SAUSAGE);
+        this.addToppings(Topping.PEPPERONI);
+        this.addToppings(Topping.BEEF);
+        this.addToppings(Topping.HAM);
+
 
     }
     @Override
@@ -35,11 +34,8 @@ public class Meatzza extends Pizza {
 
     @Override
     public String toString() {
-        return "Meatzza" + this.toppings.toString() + super.getCrust().toString() + this.price();
+        return "Meatzza " + super.getType() + " " + super.getToppings().toString() + " " + super.getCrust().toString() + " " + this.price();
     }
 
-    @Override
-    public void addToppings(Topping topping) {
 
-    }
 }

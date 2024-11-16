@@ -16,10 +16,10 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <ChoiceBox fx:id="pizzaTypeChoiceBox" layoutX="36.0" layoutY="125.0" onMouseExited="#updateGuiOnChoiceBox" prefWidth="150.0" />
-      <RadioButton fx:id="smallRadioButton" layoutX="36.0" layoutY="174.0" mnemonicParsing="false" onMouseClicked="#updatePrice" text="small" />
-      <RadioButton fx:id="mediumRadioButton" layoutX="124.0" layoutY="174.0" mnemonicParsing="false" onMouseClicked="#updatePrice" text="medium" />
-      <RadioButton fx:id="largeRadioButton" layoutX="220.0" layoutY="174.0" mnemonicParsing="false" onMouseClicked="#updatePrice" text="large" />
+      <ChoiceBox fx:id="pizzaTypeChoiceBox" layoutX="36.0" layoutY="125.0" prefWidth="150.0" />
+      <RadioButton fx:id="smallRadioButton" layoutX="36.0" layoutY="174.0" mnemonicParsing="false" text="small" />
+      <RadioButton fx:id="mediumRadioButton" layoutX="124.0" layoutY="174.0" mnemonicParsing="false" text="medium" />
+      <RadioButton fx:id="largeRadioButton" layoutX="220.0" layoutY="174.0" mnemonicParsing="false" text="large" />
       <TextField fx:id="CrustTextField" layoutX="129.0" layoutY="219.0" />
       <Text layoutX="70.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crust" />
       <Text layoutX="55.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Toppings" />

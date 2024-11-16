@@ -3,23 +3,31 @@ package src;
 public class NYPizza implements PizzaFactory {
     @Override
     public Pizza createDeluxe() {
-        return new Deluxe(Crust.BROOKLYN);
+        Pizza pizza = new Meatzza(Crust.BROOKLYN);
+        pizza.setType("New York Style");
+        return pizza;
     }
 
     @Override
     public Pizza createMeatzza() {
-        return new Meatzza(Crust.HANDTOSSED);
+        Pizza pizza = new Meatzza(Crust.HANDTOSSED);
+        pizza.setType("New York Style");
+        return pizza;
 
     }
 
     @Override
     public Pizza createBBQChicken() {
-        return new BBQChicken(Crust.THIN);
+        Pizza pizza = new BBQChicken(Crust.THIN);
+        pizza.setType("New York Style");
+        return pizza;
 
     }
 
     @Override
     public Pizza createBuildYourOwn() {
-        return new BuildYourOwn(Crust.HANDTOSSED);
+        Pizza pizza = new BuildYourOwn(Crust.THIN);
+        pizza.setType("New York Style");
+        return pizza;
     }
 }

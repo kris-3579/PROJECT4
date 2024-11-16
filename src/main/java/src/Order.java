@@ -3,11 +3,11 @@ package src;
 import java.util.ArrayList;
 
 public class Order {
-    private static int number = 1; //order number
-    private static ArrayList<Pizza> pizzas = new ArrayList<>(); //can use List<E> instead of ArrayList<E>
+    private  int number; //order number
+    private ArrayList<Pizza> pizzas = new ArrayList<>(); //can use List<E> instead of ArrayList<E>
 
-    public Order() {
-        this.number += 1;
+    public Order(int number) {
+        this.number = number;
     }
 
     public void addPizza(Pizza pizza) {
@@ -20,6 +20,18 @@ public class Order {
 
     public ArrayList<Pizza> getPizzas() {
         return this.pizzas;
+    }
+
+    public int getNumber() {
+        return this.number;
+    }
+
+    public void clearOrder(){
+        this.pizzas.clear();
+    }
+
+    public void removePizza(Pizza pizza) {
+        this.pizzas.remove(pizza);
     }
 }
 
