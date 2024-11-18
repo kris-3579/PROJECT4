@@ -98,16 +98,25 @@ public class CurrentOrderWindow {
     }
 
     public void outputPrice() {
-        double total = 0;
-        for (Pizza p: order.getPizzas()){
-            total += p.price();
-        }
-        subtotalTextField.setText(Double.toString(total));
-        double tax = Math.round(total * 0.0625 * 100) / 100.0;
-        taxTextField.setText(Double.toString(tax));
 
-        total = Math.round((total + tax) * 100) / 100.0;
-        totalPriceTextField.setText(Double.toString(total));
+        if (order.getPizzas().isEmpty()){
+            subtotalTextField.setText("0.00");
+            taxTextField.setText("0.00");
+            totalPriceTextField.setText("0.00");
+        }
+
+        else {
+            double total = 0;
+            for (Pizza p : order.getPizzas()) {
+                total += p.price();
+            }
+            subtotalTextField.setText(Double.toString(total));
+            double tax = Math.round(total * 0.0625 * 100) / 100.0;
+            taxTextField.setText(Double.toString(tax));
+
+            total = Math.round((total + tax) * 100) / 100.0;
+            totalPriceTextField.setText(Double.toString(total));
+        }
     }
 
 
