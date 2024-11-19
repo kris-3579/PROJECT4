@@ -4,16 +4,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.ImageView?>
 <BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.HelloController">
    <center>
       <BorderPane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <top>
             <AnchorPane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="chicagoStyleButton" layoutX="112.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#switchToChicagoStyle" text="Chicago Style " />
-                  <Button fx:id="nyStyleButton" layoutX="424.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#switchToNyStyle" text="NY Style" />
-                  <Button fx:id="ordersPlacedButton" layoutX="120.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#switchToOrdersPlaced" text="Orders Placed" />
-                  <Button fx:id="currentOrderButton" layoutX="395.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#switchToCurrentOrder" text="Current Order" />
+                  <StackPane layoutX="200" layoutY="200">
+                     <ImageView fitWidth="200" fitHeight="200" preserveRatio="true" smooth="true" image="../../../images/chicago_pizza.png" />
+                     <Button fx:id="chicagoStyleButton" layoutX="112.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#switchToChicagoStyle" text="Chicago Style " />
+                  </StackPane>
+                  <StackPane layoutX="200" layoutY="200">
+                     <ImageView fitWidth="200" fitHeight="200" preserveRatio="true" smooth="true" image="../../../images/ny_pizza.png" />
+                     <Button fx:id="nyStyleButton" layoutX="424.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#switchToNyStyle" text="NY Style" />
+                  </StackPane>
+                  <StackPane layoutX="200" layoutY="200">
+                     <ImageView fitWidth="200" fitHeight="200" preserveRatio="true" smooth="true" image="../../../images/orders_placed.png" />
+                     <Button fx:id="ordersPlacedButton" layoutX="120.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#switchToOrdersPlaced" text="Orders Placed" />
+                  </StackPane>
+                  <StackPane layoutX="200" layoutY="200">
+                     <ImageView fitWidth="200" fitHeight="200" preserveRatio="true" smooth="true" image="../../../images/current_order.png" />
+                     <Button fx:id="currentOrderButton" layoutX="395.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#switchToCurrentOrder" text="Current Order" />
+                  </StackPane>
                </children>
             </AnchorPane>
          </top>

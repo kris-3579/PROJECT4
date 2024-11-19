@@ -11,10 +11,13 @@ import src.Order;
 import src.Pizza;
 import javafx.scene.control.TextField;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
 
 public class OrdersPlacedWindow {
 
@@ -101,6 +104,29 @@ public class OrdersPlacedWindow {
 
         total = Math.round((total + (total * 0.0625 )) * 100.0) / 100.0;
         orderTotalTextField.setText(String.valueOf(total));
+    }
+
+    @FXML
+    public void exportOrder(javafx.scene.input.MouseEvent event) throws IOException {
+        String filePath = "orders_export.txt";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            Iterator<Order> iterator = ordersPlaced.iterator();
+            while (iterator.hasNext()) {
+                Order order = iterator.next();
+                int orderNumber = order.getNumber();
+                String customerName = order.getPizzas().toString();
+                double total = 0;
+                for (Pizza p : order.getPizzas()) {
+                    total += p.price();
+                }
+
+                writer.write(orderNumber + ", " + customerName + ", " + String.valueOf(total) + "\n");
+            }
+
+        } catch (IOException e) {
+            System.out.println("An error occurred while exporting orders.");
+            e.printStackTrace();
+        }
     }
 }
 
